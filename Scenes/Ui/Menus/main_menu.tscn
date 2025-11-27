@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqq4b0gyxo8pv"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/Menus/main_menu.gd" id="1_r47k8"]
+[ext_resource type="Texture2D" uid="uid://c6x68nd5kelri" path="res://Assets/Ui/Images/menu_wallpaper_forest_01.jpeg" id="2_dgdhd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3f1v"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r47k8")
+path_scene_options = "res://Scenes/main_menu_options.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.456852, 0.456852, 0.456852, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dgdhd")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -142.5
+offset_right = 176.0
+offset_bottom = 142.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 22
+
+[node name="New" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3f1v")
+text = "NOVA PARTIDA"
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3f1v")
+text = "CONTINUAR"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3f1v")
+text = "CONFIGURACIÓ"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3f1v")
+text = "CRÈDITS"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3f1v")
+text = "SORTIR"
+
+[connection signal="pressed" from="VBoxContainer/New" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

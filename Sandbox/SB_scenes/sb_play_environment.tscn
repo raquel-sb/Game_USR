@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://2xt3j8svcy16"]
+
+[ext_resource type="PackedScene" uid="uid://bkto04hfu5eov" path="res://Sandbox/SB_scenes/sb_mila_character.tscn" id="1_h37yl"]
+
+[node name="sb_play_environment" type="Node2D"]
+
+[node name="SBMilaCharacter" parent="." instance=ExtResource("1_h37yl")]
+position = Vector2(571, 158)
