@@ -9,6 +9,8 @@ var last_direction = "down"
 var last_sprite = "idle"
 var move_dir = Vector2.ZERO
 
+
+
 func update_movement():
 	var input := Vector2.ZERO
 	
