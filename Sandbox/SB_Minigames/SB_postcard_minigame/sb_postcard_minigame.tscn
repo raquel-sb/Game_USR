@@ -1,0 +1,177 @@
+[gd_scene load_steps=9 format=3 uid="uid://bu3lp06ra3xmv"]
+
+[ext_resource type="Script" path="res://Sandbox/SB_Minigames/SB_postcard_minigame/hueco.gd" id="1_aeb4l"]
+[ext_resource type="Script" path="res://Sandbox/SB_Minigames/SB_postcard_minigame/pegatina.gd" id="1_pcs71"]
+[ext_resource type="Script" path="res://Sandbox/SB_Minigames/SB_postcard_minigame/texto_postal.gd" id="2_ycjnw"]
+[ext_resource type="Texture2D" uid="uid://do62xy1h26pfi" path="res://Sandbox/SB_Minigames/SB_postcard_minigame/Stickers/circle_PNG16.png" id="3_be0m4"]
+[ext_resource type="Script" path="res://Sandbox/SB_Minigames/SB_postcard_minigame/rotulador.gd" id="3_fica2"]
+[ext_resource type="Texture2D" uid="uid://cs88rwjes8fj8" path="res://Sandbox/SB_Minigames/SB_postcard_minigame/Stickers/hexagon_png.png" id="5_ej2bi"]
+[ext_resource type="Texture2D" uid="uid://b2yu6gjdq663p" path="res://Sandbox/SB_Minigames/SB_postcard_minigame/Stickers/square_png.png" id="6_apu1e"]
+[ext_resource type="Texture2D" uid="uid://bknpg4635yb5a" path="res://Sandbox/SB_Minigames/SB_postcard_minigame/Stickers/triangle_PNG15.png" id="7_l67u8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fondo" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1169.0
+offset_bottom = 696.0
+color = Color(2.88785e-07, 0.442005, 0.557305, 1)
+
+[node name="Mesa" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 88.0
+offset_right = 1106.0
+offset_bottom = 606.0
+color = Color(0.256168, 0.167283, 2.40654e-08, 1)
+
+[node name="Postal" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 152.0
+offset_right = 768.0
+offset_bottom = 537.0
+
+[node name="Hueco01" type="Panel" parent="Postal"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 0
+offset_left = 96.0
+offset_top = 12.0
+offset_right = 203.0
+offset_bottom = 106.0
+script = ExtResource("1_aeb4l")
+
+[node name="Hueco02" type="Panel" parent="Postal"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 234.0
+offset_right = 284.0
+offset_bottom = 344.0
+script = ExtResource("1_aeb4l")
+
+[node name="Hueco03" type="Panel" parent="Postal"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 268.0
+offset_right = 136.0
+offset_bottom = 365.0
+script = ExtResource("1_aeb4l")
+
+[node name="TextoPostal" type="Label" parent="Postal"]
+modulate = Color(0.255407, 0.249775, 0.234534, 1)
+layout_mode = 0
+offset_left = 14.0
+offset_top = 129.0
+offset_right = 288.0
+offset_bottom = 219.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget purus non tellus placerat malesuada blandit quis orci. "
+autowrap_mode = 2
+text_overrun_behavior = 2
+script = ExtResource("2_ycjnw")
+
+[node name="Pegatinas" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 142.0
+offset_top = 119.0
+offset_right = 377.0
+offset_bottom = 557.0
+
+[node name="Pegatina01" type="TextureRect" parent="Pegatinas"]
+layout_mode = 2
+offset_left = -5.0
+offset_top = 81.0
+offset_right = 54.0
+offset_bottom = 133.0
+texture = ExtResource("3_be0m4")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_pcs71")
+sticker_id = 1
+
+[node name="Pegatina02" type="TextureRect" parent="Pegatinas"]
+layout_mode = 2
+offset_left = 93.0
+offset_top = 79.0
+offset_right = 152.0
+offset_bottom = 136.0
+texture = ExtResource("5_ej2bi")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_pcs71")
+sticker_id = 2
+
+[node name="Pegatina03" type="TextureRect" parent="Pegatinas"]
+layout_mode = 2
+offset_left = -2.0
+offset_top = 165.0
+offset_right = 52.0
+offset_bottom = 225.0
+texture = ExtResource("6_apu1e")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_pcs71")
+sticker_id = 3
+
+[node name="Pegatina04" type="TextureRect" parent="Pegatinas"]
+layout_mode = 2
+offset_left = 94.0
+offset_top = 169.0
+offset_right = 152.0
+offset_bottom = 224.0
+texture = ExtResource("7_l67u8")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_pcs71")
+sticker_id = 4
+
+[node name="Rotuladores" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 795.0
+offset_top = 363.0
+offset_right = 1065.0
+offset_bottom = 540.0
+
+[node name="RotuNegro" type="ColorRect" parent="Rotuladores"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 29.0
+offset_right = 49.0
+offset_bottom = 163.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("3_fica2")
+
+[node name="RotuAzul" type="ColorRect" parent="Rotuladores"]
+layout_mode = 2
+offset_left = 67.0
+offset_top = 34.0
+offset_right = 89.0
+offset_bottom = 162.0
+color = Color(0.493528, 0.952547, 0.9463, 1)
+script = ExtResource("3_fica2")
+color_rotu = Color(0.494118, 0.952941, 0.945098, 1)
+
+[node name="RotuRosa" type="ColorRect" parent="Rotuladores"]
+layout_mode = 2
+offset_left = 107.0
+offset_top = 32.0
+offset_right = 131.0
+offset_bottom = 164.0
+color = Color(1, 0.694118, 1, 1)
+script = ExtResource("3_fica2")
+color_rotu = Color(1, 0.694118, 1, 1)
+
+[node name="RotuNaranja" type="ColorRect" parent="Rotuladores"]
+layout_mode = 2
+offset_left = 147.0
+offset_top = 33.0
+offset_right = 169.0
+offset_bottom = 166.0
+color = Color(0.9408, 0.727553, 0.435871, 1)
+script = ExtResource("3_fica2")
+color_rotu = Color(0.941176, 0.729412, 0.435294, 1)

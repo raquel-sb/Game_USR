@@ -1,4 +1,4 @@
-[gd_scene load_steps=172 format=3 uid="uid://bkto04hfu5eov"]
+[gd_scene load_steps=173 format=3 uid="uid://bkto04hfu5eov"]
 
 [ext_resource type="Script" path="res://Sandbox/sb_mila_character.gd" id="1_gtcff"]
 [ext_resource type="Texture2D" uid="uid://c7sx8pv4d4c4e" path="res://Sandbox/SB_assets/PrototypePack/Characters/Human/Human_4_Idle0.png" id="2_ug8pl"]
@@ -801,13 +801,23 @@ animations = [{
 radius = 33.0
 height = 80.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nxhw4"]
+radius = 50.0
+height = 176.0
+
 [node name="SBMilaCharacter" type="CharacterBody2D"]
 script = ExtResource("1_gtcff")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -183)
 sprite_frames = SubResource("SpriteFrames_qqa12")
 animation = &"idle_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 157)
+position = Vector2(-2, -26)
 shape = SubResource("CapsuleShape2D_fw0hv")
+
+[node name="InteractionCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -45)
+shape = SubResource("CapsuleShape2D_nxhw4")
+debug_color = Color(0, 0.6, 0.168627, 0.419608)

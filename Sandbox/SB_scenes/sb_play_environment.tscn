@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://2xt3j8svcy16"]
+[gd_scene load_steps=3 format=3 uid="uid://2xt3j8svcy16"]
 
 [ext_resource type="PackedScene" uid="uid://bkto04hfu5eov" path="res://Sandbox/SB_scenes/sb_mila_character.tscn" id="1_h37yl"]
+[ext_resource type="PackedScene" uid="uid://ccehesqttqsrc" path="res://Sandbox/SB_scenes/sb_item_interactive_01.tscn" id="2_m5lg4"]
 
 [node name="sb_play_environment" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
 
 [node name="SBMilaCharacter" parent="." instance=ExtResource("1_h37yl")]
-position = Vector2(571, 158)
+position = Vector2(525, 286)
+
+[node name="SBItemInteractive01" parent="." instance=ExtResource("2_m5lg4")]
+position = Vector2(396, 243)

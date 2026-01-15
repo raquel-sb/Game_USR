@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccehesqttqsrc"]
+
+[ext_resource type="Texture2D" uid="uid://cus4ndjb5q8nk" path="res://Sandbox/SB_assets/PrototypePack/Isometric/crate_E.png" id="1_jwjce"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bdj1d"]
+radius = 95.0
+height = 190.0
+
+[node name="SBItemInteractive01" type="Area2D"]
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.500002, -211.5)
+texture = ExtResource("1_jwjce")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-0.499998, -71.5)
+scale = Vector2(13.65, 9.2)
+polygon = PackedVector2Array(4.98169, 5.21739, 0.10989, 9.34783, -4.68864, 5, 0.0732601, 1.73913)
+
+[node name="InteractionCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.499998, -63.5)
+shape = SubResource("CapsuleShape2D_bdj1d")
+debug_color = Color(0, 0.6, 0.168627, 0.419608)
